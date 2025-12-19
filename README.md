@@ -4,7 +4,7 @@ Aplikacja mobilna dla entuzjastów siłowni, pozwalająca na przeglądanie bazy 
 
 ## Wykorzystane API
 Aplikacja korzysta z **ExerciseDB** dostępnego na platformie RapidAPI.
-- Link: [ExerciseDB API]([https://rapidapi.com/justin-wf/api/exercisedb](https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb))
+- Link: [ExerciseDB API](https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb)
 
 ## Jak uruchomić
 
