@@ -26,7 +26,7 @@ Aby uruchomić projekt na lokalnym środowisku:
 - Flutter Web / Desktop (Zależnie od konfiguracji pluginów Firebase)
 
 
-## 🔐 Bezpieczeństwo i Konfiguracja
+## Bezpieczeństwo i Konfiguracja
 - **Plik google-services.json**: Pozostawiony w repozytorium w celu umożliwienia poprawnej kompilacji projektu przez recenzenta. 
 - **Zabezpieczenie Kluczy**: Wszystkie klucze API w konsoli Google Cloud zostały ograniczone wyłącznie do identyfikatora pakietu aplikacji (`com.example.gymbeast`) oraz unikalnego odcisku certyfikatu **SHA-1**.
 - **ExerciseDB API**: W kodzie źródłowym zastosowano placeholder `INSERT_API_KEY_HERE`. Do poprawnego działania wymagany jest własny klucz z RapidAPI.
