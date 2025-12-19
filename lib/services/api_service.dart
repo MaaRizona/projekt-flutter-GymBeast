@@ -5,7 +5,7 @@ import '../models/exercise_detail.dart';
 
 class ApiService {
   static const String _baseUrl = 'https://exercisedb.p.rapidapi.com';
-  static const String _apiKey = 'b60dd7a10fmsh8b8c2ee19631cbdp1e0dfcjsne40a18ad9b95';
+  static const String _apiKey = 'INSERT_API_KEY_HERE';
   static const Map<String, String> _headers = {
     'X-RapidAPI-Key': _apiKey,
     'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com',
@@ -26,10 +26,10 @@ class ApiService {
         final List<dynamic> jsonList = jsonDecode(response.body);
         return jsonList.map((e) => Exercise.fromJson(e)).toList();
       } else {
-        throw Exception('Failed to load exercises: ${response.statusCode}');
+        throw Exception('Błąd ładowania ćwiczeń: ${response.statusCode}');
       }
     } catch (e) {
-      throw Exception('Network error: $e');
+      throw Exception('Błąd sieci: $e');
     }
   }
 
@@ -44,10 +44,10 @@ class ApiService {
         final Map<String, dynamic> json = jsonDecode(response.body);
         return ExerciseDetail.fromJson(json);
       } else {
-        throw Exception('Failed to load exercise details: ${response.statusCode}');
+        throw Exception('Błąd ładowania szczegółów ćwiczenia: ${response.statusCode}');
       }
     } catch (e) {
-      throw Exception('Network error: $e');
+      throw Exception('Błąd sieci: $e');
     }
   }
 }

@@ -68,20 +68,20 @@ class _ExerciseDetailScreenState extends State<ExerciseDetailScreen> {
                 ),
                 const SizedBox(height: 16),
                 
-                _buildSectionTitle('Target Muscle'),
+                _buildSectionTitle('Mięsień docelowy'),
                 Text(detail.target, style: const TextStyle(fontSize: 18)),
                 const SizedBox(height: 10),
 
-                _buildSectionTitle('Body Part'),
+                _buildSectionTitle('Partia ciała'),
                 Text(detail.bodyPart, style: const TextStyle(fontSize: 18)),
                 const SizedBox(height: 10),
 
-                _buildSectionTitle('Equipment'),
+                _buildSectionTitle('Sprzęt'),
                 Text(detail.equipment, style: const TextStyle(fontSize: 18)),
                 const SizedBox(height: 10),
 
                 if (detail.secondaryMuscles.isNotEmpty) ...[
-                  _buildSectionTitle('Secondary Muscles'),
+                  _buildSectionTitle('Mięśnie pomocnicze'),
                   Wrap(
                     spacing: 8.0,
                     children: detail.secondaryMuscles.map((muscle) => Chip(label: Text(muscle))).toList(),

@@ -14,7 +14,7 @@ class ExerciseViewModel extends ChangeNotifier {
   })  : _repository = repository ?? ExerciseRepository(),
         _analyticsService = analyticsService ?? AnalyticsService();
 
-  // --- List State ---
+  // --- Stan Listy ---
   List<Exercise> _allExercises = [];
   List<Exercise> _displayedExercises = [];
   bool _isLoading = false;
@@ -28,7 +28,7 @@ class ExerciseViewModel extends ChangeNotifier {
   String get errorMessage => _errorMessage;
   bool get hasMore => _hasMore;
 
-  // --- Detail State ---
+  // --- Stan Szczegółów ---
   ExerciseDetail? _currentDetail;
   bool _isDetailLoading = false;
   String _detailError = '';
@@ -37,7 +37,7 @@ class ExerciseViewModel extends ChangeNotifier {
   bool get isDetailLoading => _isDetailLoading;
   String get detailError => _detailError;
 
-  // --- List Logic ---
+  // --- Logika Listy ---
 
   Future<void> loadInitialExercises() async {
     _isLoading = true;
@@ -56,7 +56,7 @@ class ExerciseViewModel extends ChangeNotifier {
       _allExercises = newExercises;
       _displayedExercises = List.from(_allExercises);
       
-      // Log event
+      // Zdarzenie analityczne
       if (_currentOffset == 0) {
         _analyticsService.logExerciseListLoaded(
           count: newExercises.length,
@@ -79,7 +79,7 @@ class ExerciseViewModel extends ChangeNotifier {
   Future<void> loadMoreExercises() async {
     if (_isLoading || !_hasMore) return;
     
-    // UI showing loading indicator at bottom based on scroll
+    // UI pokazuje wskaźnik ładowania na dole na podstawie przewijania
     try {
       final newExercises = await _repository.getExercises(limit: _limit, offset: _currentOffset);
       
@@ -92,7 +92,7 @@ class ExerciseViewModel extends ChangeNotifier {
         if (newExercises.length < _limit) _hasMore = false;
       }
     } catch (e) {
-      // Just ignore pagination errors or show snackbar in UI
+      // Ignorujemy błędy paginacji lub pokazujemy snackbar w UI
     } finally {
       notifyListeners();
     }
@@ -114,7 +114,7 @@ class ExerciseViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  // --- Detail Logic ---
+  // --- Logika Szczegółów ---
 
   Future<void> loadExerciseDetails(String id) async {
     _isDetailLoading = true;
