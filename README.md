@@ -4,7 +4,7 @@ Aplikacja mobilna dla entuzjastów siłowni, pozwalająca na przeglądanie bazy 
 
 ## Wykorzystane API
 Aplikacja korzysta z **ExerciseDB** dostępnego na platformie RapidAPI.
-- Link: [ExerciseDB API](https://rapidapi.com/justin-wf/api/exercisedb)
+- Link: [ExerciseDB API]([https://rapidapi.com/justin-wf/api/exercisedb](https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb))
 
 ## Jak uruchomić
 
@@ -25,7 +25,14 @@ Aby uruchomić projekt na lokalnym środowisku:
 - **iOS** (Wymaga osobnej konfiguracji `GoogleService-Info.plist` dla Firebase)
 - Flutter Web / Desktop (Zależnie od konfiguracji pluginów Firebase)
 
-## Firebase & Analytics (Wersja 5.0)
+
+## 🔐 Bezpieczeństwo i Konfiguracja
+- **Plik google-services.json**: Pozostawiony w repozytorium w celu umożliwienia poprawnej kompilacji projektu przez recenzenta. 
+- **Zabezpieczenie Kluczy**: Wszystkie klucze API w konsoli Google Cloud zostały ograniczone wyłącznie do identyfikatora pakietu aplikacji (`com.example.gymbeast`) oraz unikalnego odcisku certyfikatu **SHA-1**.
+- **ExerciseDB API**: W kodzie źródłowym zastosowano placeholder `INSERT_API_KEY_HERE`. Do poprawnego działania wymagany jest własny klucz z RapidAPI.
+
+- 
+## Firebase & Analytics
 
 W projekcie zintegrowano usługi Firebase w celu monitorowania stabilności i zaangażowania użytkowników.
 
