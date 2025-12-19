@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "821842052188",
+    "project_id": "gymbeast-b5223",
+    "storage_bucket": "gymbeast-b5223.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:821842052188:android:37bf55b6b7ba0711d75299",
+        "android_client_info": {
+          "package_name": "com.example.gymbeast"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJfY0XuOuHQzEme9RiXlV-1iNpR-wt2SM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
